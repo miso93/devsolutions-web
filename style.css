@@ -136,6 +136,8 @@ h1, h2, h3, .logo {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
 }
 
 .logo-mark {
@@ -341,6 +343,18 @@ footer {
   font-size: 0.85rem;
 }
 
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--text-dim);
+}
+
+.footer-links a:hover {
+  color: var(--accent-3);
+}
+
 .social-link {
   display: inline-flex;
   align-items: center;
@@ -358,6 +372,98 @@ footer {
   color: var(--accent-3);
   border-color: var(--accent-3);
   transform: translateY(-2px);
+}
+
+.cookie-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
+
+.cookie-banner p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.cookie-banner a {
+  color: var(--accent-3);
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.btn-cookie-primary,
+.btn-cookie-secondary {
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-cookie-primary {
+  background: var(--accent-3);
+  color: #04211d;
+  border-color: var(--accent-3);
+}
+
+.btn-cookie-primary:hover {
+  background: #3ee8da;
+}
+
+.btn-cookie-secondary {
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-cookie-secondary:hover {
+  border-color: var(--text-dim);
+}
+
+.legal-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 5rem;
+}
+
+.legal-content h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 1.5rem;
+}
+
+.legal-content h2 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.legal-content p,
+.legal-content li {
+  color: var(--text-dim);
+  margin-bottom: 0.8rem;
+}
+
+.legal-content ul {
+  padding-left: 1.4rem;
+}
+
+.legal-content a {
+  color: var(--accent-3);
 }
 
 /* Scroll fade-in */

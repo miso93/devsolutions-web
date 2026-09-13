@@ -25,19 +25,23 @@ navMenu.querySelectorAll('a').forEach((link) => {
 });
 
 const emailLink = document.getElementById('emailLink');
-const email = atob(emailLink.dataset.email);
-emailLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  emailLink.href = `mailto:${email}`;
-  emailLink.textContent = email;
-  window.location.href = `mailto:${email}`;
-});
+if (emailLink) {
+  const email = atob(emailLink.dataset.email);
+  emailLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    emailLink.href = `mailto:${email}`;
+    emailLink.textContent = email;
+    window.location.href = `mailto:${email}`;
+  });
+}
 
 const hero = document.getElementById('hero');
 const cursorGlow = document.getElementById('cursorGlow');
 
-hero.addEventListener('mousemove', (e) => {
-  const rect = hero.getBoundingClientRect();
-  cursorGlow.style.left = `${e.clientX - rect.left}px`;
-  cursorGlow.style.top = `${e.clientY - rect.top}px`;
-});
+if (hero && cursorGlow) {
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    cursorGlow.style.left = `${e.clientX - rect.left}px`;
+    cursorGlow.style.top = `${e.clientY - rect.top}px`;
+  });
+}
