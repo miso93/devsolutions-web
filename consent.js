@@ -1,4 +1,4 @@
-const GA_MEASUREMENT_ID = ''; // TODO: doplniť napr. 'G-XXXXXXXXXX' po založení Google Analytics
+const GA_MEASUREMENT_ID = 'G-K3C4QT69WT';
 const CONSENT_KEY = 'cookie-consent';
 
 function loadGoogleAnalytics() {
